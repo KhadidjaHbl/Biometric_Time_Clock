@@ -14,9 +14,9 @@ This is a Node.js Mini-project for managing “Biometric Time Clock” data.
 
 - '/' (GET) - Get a list of employees.
 - '/' (POST) - Create a new employee.
--'/created/:date' - Filter to get employees based on a date of creation.
--'/check-in' - When an employee performs a Check-in.
--'/check-out' - When an employee performs a Check-out.
+- '/created/:date' - Filter to get employees based on a date of creation.
+- '/check-in' - When an employee performs a Check-in.
+- '/check-out' - When an employee performs a Check-out.
 
 ## Dependencies
 
