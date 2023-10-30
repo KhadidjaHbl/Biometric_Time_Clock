@@ -21,5 +21,5 @@ This is a Node.js Mini-project for managing “Biometric Time Clock” data.
 ## Dependencies
 
 - Express
-- mysql
+- mysql2
 
