@@ -3,13 +3,14 @@ const CheckTime = require('../models/CheckTime');
 
 exports.checkIn = async (req, res) => {
     try {
+      console.log(req.body); 
       const { employeeId, comment } = req.body;
       const timestamp = new Date();
   
       const checkInRecord = await CheckTime.create({ employeeId, checkType: 'check-in', comment, timestamp });
-  
       res.status(201).json(checkInRecord);
     } catch (error) {
+      console.log(error)
       res.status(500).json({ error: 'Failed to check in.' });
     }
 };
@@ -36,7 +37,7 @@ exports.checkOut = async (req, res) => {
     //Calculate the time difference between check-in and check-out
     const checkInTime = checkInRecord.timestamp;
     const checkOutTime = timestamp;
-    const timeDifference = (checkOutTime - checkInTime) / (1000 * 60); //Time diff in min
+    const timeDifference = (checkOutTime - checkInTime) / (1000 * 60); 
 
     const checkOutRecord = await CheckTime.create({ employeeId, checkType: 'check-out', comment, timestamp });
 
