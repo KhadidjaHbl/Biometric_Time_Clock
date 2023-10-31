@@ -6,6 +6,7 @@ const CheckTime = sequelize.define('CheckTime', {
   checkType: DataTypes.STRING, 
   comment: DataTypes.STRING,
   timestamp: DataTypes.DATE,
+  timeDifference: DataTypes.INTEGER, 
   employeeId: { 
     type: DataTypes.INTEGER,
     references: {
